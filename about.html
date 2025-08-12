@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Africa Education Holdings empowers Africa’s youth through accessible, market-relevant tertiary education. Explore top universities in Uganda, Zambia, Senegal, and Mali, innovative learning programs, and pathways to global employment and entrepreneurship." />
+    
+    <title>About AEH</title>
+
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+    <link rel="stylesheet" href="css/about.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- SwiperJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07)] sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div>
+                <a href="index.html"><img src="images/logo_trans.png" alt="AEH Logo" class="h-12"></a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8 navlist">
+                <li><a href="index.html" class="hover:text-[#8EC86F] transition-colors duration-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-[#8EC86F] transition-colors duration-300">About Us</a></li>
+                <li><a href="#" class="hover:text-[#8EC86F] transition-colors duration-300">Services</a></li>
+                <li><a href="#" class="hover:text-[#8EC86F] transition-colors duration-300">Universities</a></li>
+                <li><a href="#" class="hover:text-[#8EC86F] transition-colors duration-300">Blog</a></li>
+                <li><a href="#contact" class="hover:text-[#8EC86F] transition-colors duration-300">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="z-50 block hamburger focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden md:hidden">
+            <ul class="absolute flex flex-col w-auto py-3 space-y-2 bg-white rounded-lg shadow-xl right-6 navlist">
+                <li><a href="index.html" class="block px-6 py-2 hover:text-[#8EC86F]">Home</a></li>
+                <li><a href="about.html" class="block px-6 py-2 hover:text-[#8EC86F]">About Us</a></li>
+                <li><a href="#" class="block px-6 py-2 hover:text-[#8EC86F]">Services</a></li>
+                <li><a href="#" class="block px-6 py-2 hover:text-[#8EC86F]">Universities</a></li>
+                <li><a href="#" class="block px-6 py-2 hover:text-[#8EC86F]">Blog</a></li>
+                <li><a href="#contact" class="block px-6 py-2 hover:text-[#8EC86F]">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- START: Static About Us Hero Section -->
+    <section class="relative about-hero-section">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop');">
+        </div>
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Text Content Container  -->
+        <div class="relative z-10 text-content-container">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">We are building <br>
+                more than a university.</h1>
+            <p class="text-lg md:text-xl max-w-6xl mb-8">We aim to serve the communities and countries in which the universities operate. <br>
+                We believe that through these partnerships we can transform Africa into an
+                economic and intellectual powerhouse.
+            </p>
+            <a href="#our-story"
+                class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300">
+                Discover Our Story
+            </a>
+        </div>
+    </section>
+    <!-- END: Static About Us Hero Section -->
+
+    <section class="py-4 wwa" id="our-story">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Mouse Icon -->
+            <div class="mouse-icon">
+                <div class="wheel"></div>
+            </div>
+            <h2 class="text-3xl font-bold">About Africa Education Holdings</h2>
+        </div>
+    </section>
+
+    <!-- START: About Intro & Map Section -->
+    <section class="about-intro-section">
+        <div class="intro-grid-container">
+            <!-- Left Column: Text -->
+            <div class="intro-text">
+                <p>
+                    Africa Education Holdings is a leading provider of educational resources and services for students,
+                    teachers, and institutions across the continent. With a commitment to innovation and excellence, we
+                    strive to empower individuals and communities through accessible and high-quality educational
+                    offerings.
+                </p>
+                <p>
+                    AEH owns and operates four private universities in Uganda and Zambia (Anglophone) and Senegal and
+                    Mali (Francophone) with a combined Total Enrolment of 14,500 students.
+                </p>
+                <p>
+                    AEH is passionate about serving its university partners, the students and alumni of those
+                    universities, their faculty and their staff. We also aim to serve the communities and countries in
+                    which the universities operate. We believe that through these partnerships we can transform Africa
+                    into an economic and intellectual powerhouse. This feat is based on the strength and knowledge of
+                    her people, her sheer size and scale and her vastly untapped resources which all Africans deserve to
+                    share.
+                </p>
+            </div>
+
+            <!-- Right Column: Map Image -->
+            <div class="map-container">
+                <!-- *** IMPORTANT: Replace this src with the path to your actual map image *** -->
+                <img src="images/africa.png" alt="Map of Africa highlighting Uganda, Zambia, Senegal, and Mali">
+            </div>
+        </div>
+    </section>
+    <!-- END: About Intro & Map Section -->
+
+    <!-- START: Mission & Vision Section -->
+    <section class="mission-vision-section">
+        <div class="mission-vision-container">
+            <!-- Column 1: Our Mission -->
+            <div class="mission-item">
+                <div class="title-with-icon">
+                    <i class="fa-solid fa-bullseye mission-vision-icon"></i>
+                    <h3 class="mission-title">Our Mission</h3>
+                </div>
+                <p class="mission-description">
+                    To provide accessible, market-relevant, and transformative education to Africa’s youth. We are
+                    pioneering a new model of an African university designed to prepare and help each student achieve
+                    gainful employment and entrepreneurship on a global scale, unlocking Africa’s vast economic
+                    potential.
+                </p>
+            </div>
+
+            <!-- Column 2: Our Vision -->
+            <div class="vision-item">
+                <div class="title-with-icon">
+                    <!-- Font Awesome Vision Icon -->
+                    <i class="fa-regular fa-eye mission-vision-icon"></i>
+                    <h3 class="vision-title">Our Vision</h3>
+                </div>
+                <p class="vision-description">
+                    We envision a future where every young African has the opportunity to attain a world-class education
+                    that empowers them to become ethical leaders, innovators, and catalysts for sustainable development
+                    within their communities and across the globe.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- END: Mission & Vision Section -->
+
+    <!-- START: Leadership Team Section -->
+    <section class="leadership-section">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="leadership-header">
+                <h2 class="leadership-main-title">Meet Our Leadership Team</h2>
+                <p class="leadership-intro">
+                    AEH is led by a dedicated team with a combined 80+ years in tertiary education in the U.S. and in
+                    Sub-Saharan Africa.
+                </p>
+            </div>
+
+            <!-- Leadership Swiper Carousel -->
+            <div class="swiper leadership-swiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Team Member 1: Peter Kagunye -->
+                    <div class="swiper-slide">
+                        <div class="team-card" data-name="Peter Kagunye" data-title="Chief Executive Officer"
+                            data-bio="<p>Peter has more than 17 years of experience serving as Chief Financial Officer and Investment Manager in the private equity industry in the U.S as well as extensive accounting and auditing experience as a licensed CPA.</p><p>As CFO for a Boston-based private equity firm specialising in providing acquisition and growth capital to lower middle market companies, he successfully led the firm’s accounting, finance and human resource operations. In his previous role as a Finance Manager at Bain Capital, Peter developed expertise in developing finance and accounting reporting systems and managing financial audits. He was previously a senior auditor at PricewaterhouseCoopers.</p><p>Additionally Peter brings his start-up and entrepreneurial experience as founder of a beverage company and a youth leadership organization to the Maarifa team. Peter is a CPA and holds a BS in Accounting and Finance from University of Massachusetts Boston and an MBA from Babson College. He is fluent in Swahili and Kikuyu.</p>">
+                            <div class="team-card-icon"><i class="fa-solid fa-user"></i></div>
+                            <h3 class="team-member-name">Peter Kagunye</h3>
+                            <p class="team-member-title">Chief Executive Officer</p>
+                            <p class="team-member-bio">Peter has more than 17 years of experience serving as Chief
+                                Financial Officer and Investment Manager in the...</p>
+                            <a href="#" class="read-more-link">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2: Prof. Olubayi Olubayi -->
+                    <div class="swiper-slide">
+                        <div class="team-card" data-name="Prof. Olubayi Olubayi" data-title="Chief Academic Officer"
+                            data-bio="<p>Prof. O. Olubayi was born and raised in Kenya and educated at Rutgers. Prior to joining Maarifa Education, he was the Vice Chancellor/President of the International University of East Africa (IUEA) in Uganda. He is a scientist and an expert on bacteria, education, learning, leadership and social-entrepreneurship.</p><p>As a scientist and eclectic scholar, Olubayi earned his Ph.D. on bacteria-and- plant cell interactions at Rutgers University, holds a research patent on the flocculation of bacteria and has published several scholarly articles in microbiology, biotechnology and social science.</p><p>As an educator he taught at Middlesex College and at Rutgers University for 16 years, and has taught critical thinking in the IUEA MBA program. He has been an advisor and consultant to government officials in Kenya and South Africa, and UNDP on matters of literacy, education, biotechnology, sustainable development and global citizenship. He is an external advisor to PhD students in the Oxford University-Kemri/Wellcome Trust Research Program in Kilifi, Kenya.</p><p>As a social entrepreneur, Olubayi co-founded the nonprofit Kiwimbi International and the widely respected American nonprofit Global Literacy Project which sets up libraries worldwide and provides global service learning opportunities. As a thinker, he is the author of the book “Education for a Better World.”</p>">
+                            <div class="team-card-icon"><i class="fa-solid fa-user"></i></div>
+                            <h3 class="team-member-name">Prof. Olubayi Olubayi</h3>
+                            <p class="team-member-title">Chief Academic Officer</p>
+                            <p class="team-member-bio">Prof O. Olubayi was born and raised in Kenya and educated at
+                                Rutgers. Prior t...</p>
+                            <a href="#" class="read-more-link">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3: Reginald Rainey -->
+                    <div class="swiper-slide">
+                        <div class="team-card" data-name="Reginald Rainey" data-title="Director of Operations"
+                            data-bio="<p>Reggie spent 25 years building Strayer University, serving most recently as the Vice President of University Admissions, and previously as the Regional Vice President of Operations.</p><p>In his role as Vice President of University Admissions, Reggie created and led the University Admissions Department, guiding Strayer to record new enrolment. Additionally, Reggie managed 25 campuses in multiple regions, and was responsible for annual revenue in excess of US$100m and regulatory compliance at the state and federal level. The Strayer business model is transferable to the African market. Reggie graduated with a BS in Accounting and an MBA from Strayer University.</p>">
+                            <div class="team-card-icon"><i class="fa-solid fa-user"></i></div>
+                            <h3 class="team-member-name">Reginald Rainey</h3>
+                            <p class="team-member-title">Director of Operations</p>
+                            <p class="team-member-bio">Reggie spent 25 years building Strayer University, serving most
+                                recently as the Vice President of University...</p>
+                            <a href="#" class="read-more-link">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4: Oscar Correia -->
+                    <div class="swiper-slide">
+                        <div class="team-card" data-name="Oscar Correia"
+                            data-title="Director of Technology & Academic Operations"
+                            data-bio="<p>Oscar has more than 20 years’ experience in Information Technology spanning various sectors including education, telecommunications, mobile financial services, IT outsourcing and product management.</p><p>His last assignment was leading one of the largest mobile money managed services as Vice President, Financial Services at MahindraComviva. Prior to that he spent 10 years at Airtel Africa working in Kenya where he played various roles from IT Director to Head of Products. Oscar has a degree in Electrical Engineering from the University of Nairobi, a Post Graduate Diploma in Telecommunications from Ashton University and an MBA from Warwick Business School. He also holds certifications in ITIL and Cisco as well as PRINCE2 certification.</p>">
+                            <div class="team-card-icon"><i class="fa-solid fa-user"></i></div>
+                            <h3 class="team-member-name">Oscar Correia</h3>
+                            <p class="team-member-title">Director of Technology & Academic Operations</p>
+                            <p class="team-member-bio">Oscar has more than 20 years’ experience in Information
+                                Technology spanning various sectors including...</p>
+                            <a href="#" class="read-more-link">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 5: Anthony Bonnett -->
+                    <div class="swiper-slide">
+                        <div class="team-card" data-name="Anthony Bonnett"
+                            data-title="Director of Real Estate & Facilities Management"
+                            data-bio="<p>Anthony is a C-level executive in the Property Investment, Development, and Construction sectors. He has more than 20 years of experience in these areas covering extensively Southern, West and East Africa in senior level roles from board member appointments to consultancy and advisory services.</p><p>Anthony has further served in senior consultancy and associate roles in London and South East England. Prior to joining Maarifa, he was Managing Director of JSE-listed Sable Homes, Regional Development Director at Lordship Africa, and Associate Designate at Rider Levett Bucknall. Anthony was educated at Wits University in South Africa and is a full member of the International Chartered Institute of Builders. He has also completed Environmental Auditing and Health & Safety qualifications in the UK.</p>">
+                            <div class="team-card-icon"><i class="fa-solid fa-user"></i></div>
+                            <h3 class="team-member-name">Anthony Bonnett</h3>
+                            <p class="team-member-title">Director of Real Estate & Facilities Management</p>
+                            <p class="team-member-bio">Anthony is a C-level executive in the Property Investment,
+                                Development, and Construction sectors...</p>
+                            <a href="#" class="read-more-link">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 6: Trizah Mungai -->
+                    <div class="swiper-slide">
+                        <div class="team-card" data-name="Trizah Mungai" data-title="Finance Manager"
+                            data-bio="<p>Trizah is a fully qualified finance and accounting professional with more than 16 years of experience in managing financial reporting, consolidation and financial analysis process of firms.</p><p>She is known for her commitment to achieving high levels of accuracy using ethical work standards, as well as strong organizational, analytical and interpersonal skills. Her passion is to leverage her analytical skills, cross-functional mindset and stakeholder management skills to drive business integrity and performance, while also coaching and mentoring others to achieve their potential. She is always eager to learn new things, explore new opportunities, and collaborate with diverse and talented people.</p>">
+                            <div class="team-card-icon"><i class="fa-solid fa-user"></i></div>
+                            <h3 class="team-member-name">Trizah Mungai</h3>
+                            <p class="team-member-title">Finance Manager</p>
+                            <p class="team-member-bio">Trizah is a fully qualified finance and accounting professional
+                                with more than 16 years of experience...</p>
+                            <a href="#" class="read-more-link">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 7: Sidney Dede -->
+                    <div class="swiper-slide">
+                        <div class="team-card" data-name="Sidney Dede" data-title="Finance Manager"
+                            data-bio="<p>Sidney embarked on his professional journey in France, initially serving as a Digital Transformation consultant at DXC Technology and Grant Thornton. Following this, he transitioned to Ecobank Côte d'Ivoire, where he held the role of Business Analyst for two years.</p><p>In 2022, Sidney joined Takafa Education Initially assuming the role of Analyst before progressing to his current position as Finance Manager. He is a graduate of SKEMA Business School, Paris, holding a master's degree in corporate financial management, as well as a bachelor's degree in management techniques with a specialization in finance from KEDGE Business School.</p>">
+                            <div class="team-card-icon"><i class="fa-solid fa-user"></i></div>
+                            <h3 class="team-member-name">Sidney Dede</h3>
+                            <p class="team-member-title">Finance Manager</p>
+                            <p class="team-member-bio">Sidney embarked on his professional journey in France, initially
+                                serving as a Digital Transformation consultant...</p>
+                            <a href="#" class="read-more-link">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination leadership-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- END: Leadership Team Section -->
+
+    <!-- START: Investor Section -->
+    <section class="investor-section">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="investor-header">
+                <h2 class="investor-main-title">Our Investors</h2>
+            </div>
+
+            <!-- Investor Grid -->
+            <div class="investor-grid">
+                <!-- Left Column: Text -->
+                <div class="investor-text">
+                    <h3 class="investor-name">FinnFund</h3>
+                    <p>
+                        Finnfund is a Finnish Development Finance Institution (DFI) which builds a sustainable world by
+                        investing in responsible and profitable businesses that drive sustainable developments in
+                        developing countries.
+                    </p>
+                    <p>
+                        FinnFund provides businesses operating in developing countries with risk capital, long-term
+                        investment loans, mezzanine financing and expertise on how to invest in the developing markets.
+                        FinnFund has invested approximately EUR 557 million primarily in clean energy, sustainable
+                        forestry, financial institutions, and agriculture. Maarifa is Finnfund’s first investment in the
+                        education sector.
+                    </p>
+                </div>
+
+                <!-- Right Column: Logo -->
+                <div class="investor-logo-wrapper">
+                    <img src="images/finnfund.png" alt="FinnFund Logo" class="investor-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: Investor Section -->
+
+    <!-- START: Team Member Modal -->
+    <div id="team-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-name" class="modal-name"></h2>
+                    <p id="modal-title" class="modal-title"></p>
+                    <div id="modal-bio" class="modal-bio"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Team Member Modal -->
+
+    <section class="py-16 md:py-24 video-sect">
+        <div class="container mx-auto px-6">
+            <!-- Grid container for the staggered layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+                <div>
+                    <!-- Responsive Aspect Ratio Container -->
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-xl overflow-hidden">
+                        <iframe width="600" height="315"
+                            src="https://www.youtube.com/embed/JMLsHI8aV0g?si=eIq8LKsciZIUa34f"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+
+                <div class="text-gray-800">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Our Impact</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed text-center">
+                        Explore the transformative power of Africa Education Holdings. Our videos share compelling
+                        stories of how accessible, quality education empowers youth, drives innovation, and shapes a
+                        brighter future across the continent.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- START: Get In Touch Section -->
+    <section class="contact-section" id="contact">
+        <div class="container mx-auto px-6">
+
+            <!-- Section Header -->
+            <div class="contact-header">
+                <h2 class="contact-main-title">Get In Touch With Us</h2>
+                <p class="contact-intro">
+                    Reach out to our knowledgeable team at Africa Education Holdings for any inquiries or feedback.
+                    We're here to assist you. Whether you have a specific question or would like to discuss potential
+                    partnership opportunities, our dedicated professionals are ready to address your needs.
+                </p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <div class="form-grid">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" class="form-input">
+                    </div>
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                            class="form-input">
+                    </div>
+                    <!-- Subject Field -->
+                    <div class="form-group full-width">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Inquiry about partnership"
+                            class="form-input">
+                    </div>
+                    <!-- Message Field -->
+                    <div class="form-group full-width">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Type your message here..."
+                            class="form-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <button type="submit" class="submit-button">Send Message</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+    <!-- END: Get In Touch Section -->
+
+    <!-- START: Footer Section -->
+    <footer class="site-footer">
+        <div class="container mx-auto px-6 py-12">
+            <div class="footer-grid">
+
+                <!-- Column 1: Logo and About -->
+                <div class="footer-col">
+                    <img src="images/logo_trans.png" alt="AEH Logo" class="footer-logo mb-4">
+                    <p class="text-gray-400">
+                        Pioneering transformative and accessible education to unlock the potential of Africa's youth.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Universities</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Us -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@africaeducationholdings.com</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>(+254) (0) 732 188 413</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Network Development -->
+                <div class="footer-col">
+                    <h3 class="footer-title">AEH Network Development</h3>
+                    <p class="text-gray-400">
+                        AEH is actively looking to add institutions to its portfolio. If you are interested in
+                        discussing possible partnerships, please contact us.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; <span id="copyright-year"></span> Africa Education Holdings. All Rights
+                    Reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer Section -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Hamburger Menu Logic ---
+            const btn = document.getElementById('menu-btn');
+            const menu = document.getElementById('menu');
+
+            if (btn && menu) {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    btn.classList.toggle('open');
+                    menu.classList.toggle('hidden');
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                        btn.classList.remove('open');
+                        menu.classList.add('hidden');
+                    }
+                });
+            }
+
+            // --- Leadership Swiper Initialization ---
+            const leadershipSwiper = new Swiper('.leadership-swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                slidesPerView: 1,
+                spaceBetween: 30,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 40
+                    }
+                },
+                pagination: {
+                    el: '.leadership-pagination',
+                    clickable: true,
+                },
+            });
+
+            // --- Team Modal Logic ---
+            const readMoreLinks = document.querySelectorAll('.read-more-link');
+            const modal = document.getElementById('team-modal');
+            const modalClose = document.querySelector('.modal-close');
+
+            if (modal) {
+                const modalName = document.getElementById('modal-name');
+                const modalTitle = document.getElementById('modal-title');
+                const modalBio = document.getElementById('modal-bio');
+
+                readMoreLinks.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const card = this.closest('.team-card');
+
+                        // Get data from the card's data-* attributes
+                        const name = card.dataset.name;
+                        const title = card.dataset.title;
+                        const bio = card.dataset.bio;
+
+                        // Populate the modal
+                        modalName.textContent = name;
+                        modalTitle.textContent = title;
+                        modalBio.innerHTML = bio;
+
+                        // Show the modal
+                        document.body.classList.add('modal-open');
+                    });
+                });
+
+                // Function to close the modal
+                const closeModal = () => {
+                    document.body.classList.remove('modal-open');
+                };
+
+                // Close modal when clicking the 'x'
+                modalClose.addEventListener('click', closeModal);
+
+                // Close modal when clicking on the overlay background
+                modal.addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        closeModal();
+                    }
+                });
+            }
+        });
+
+        // --- Dynamic Copyright Year ---
+        const yearSpan = document.getElementById('copyright-year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
+
+</body>
+
+</html>

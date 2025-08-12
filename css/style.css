@@ -1,0 +1,773 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+:root{
+    --blue-col:#3998BD;
+    --green-col:#8EC86F;
+    --dark-blue:#3A5F7D;
+    --dark-background:#D6E9EC;
+    --light-back:#F5F9FB;
+    --white:#fff;
+    --text-bright:#dff1e0;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; 
+}
+.hero-swiper .swiper-slide {
+    position: relative; 
+}
+
+.hero-swiper .text-content-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: flex-start;
+    padding: 5rem 1.5rem; 
+    color: var(--white);
+}
+
+/* Responsive padding for larger screens */
+@media (min-width: 768px) {
+    .hero-swiper .text-content-container {
+        padding: 6rem 3rem;
+    }
+}
+@media (min-width: 1024px) {
+    .hero-swiper .text-content-container {
+        padding: 6rem 6rem; 
+    }
+}
+.swiper-button-next, .swiper-button-prev {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: var(--green-col);
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px; 
+    font-weight: 900;
+}
+.text-dark{
+    color: var(--dark-blue);
+}
+
+.text-light{
+    color: var(--text-bright);
+}
+
+.wwa{
+    background-color: var(--dark-background);
+}
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+    display: none;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.about-swiper .swiper-pagination-bullet {
+    width: 24px;
+    height: 24px;
+    background-color: #a3a3a3; 
+    opacity: 0.8;
+    transition: background-color 0.3s;
+}
+
+.about-swiper .swiper-pagination-bullet-active {
+    background-color: #71a857; 
+}
+
+.about-swiper .swiper-pagination {
+    position: static; 
+    margin-top: 1.5rem; 
+}
+
+/* --- START: University Carousel Section Styles  */
+
+.university-carousel-section {
+    padding-bottom: 0; 
+    background-color: var(--light-back);
+}
+
+.university-swiper {
+    position: relative;
+}
+
+.university-split-container {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .university-split-container {
+        flex-direction: row;
+    }
+}
+
+.university-half {
+    flex: 1;
+    position: relative;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    min-height: 600px; /* Adjusted for better content fit */
+}
+
+#cuu-half {
+    background-image: url('../images/cu1.jpg');
+}
+
+#cuz-half {
+    background-image: url('../images/cz1.jpg');
+}
+
+#iam-senegal-half {
+    background-image: url('../images/iam1.jpg');
+}
+
+#iam-bamako-half {
+    background-image: url('../images/iam2.jpg');
+}
+
+.half-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+.half-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.university-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--green-col);
+    padding-bottom: 0.5rem;
+    max-width: 90%;
+}
+
+.top-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .top-content-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.details-grid, .faculties {
+    flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+    .details-grid, .faculties {
+        flex-basis: 48%;
+    }
+}
+
+.details-grid p {
+    margin-bottom: 0.5rem;
+}
+
+.faculties h3, .mission h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.faculties ul {
+    list-style: disc;
+    list-style-position: inside;
+    padding-left: 0.5rem;
+}
+
+.faculties ul li {
+    margin-bottom: 0.25rem;
+}
+
+.mission {
+    margin-top: auto; 
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--blue-col);
+    color: white;
+    border-radius: 9999px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    align-self: flex-end; 
+}
+
+.learn-more-btn:hover {
+    background-color: var(--green-col);
+}
+
+/* THE FIX for Pagination Centering and Spacing */
+.university-swiper .swiper-pagination {
+    position: absolute;
+    bottom: 15px; /* Position from the bottom of the swiper container */
+    left: 50%;
+    z-index: 10;
+}
+
+.university-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #a3a3a3;
+    opacity: 1;
+    transition: background-color 0.3s, width 0.3s;
+}
+
+.university-swiper .swiper-pagination-bullet-active {
+    width: 30px;
+    border-radius: 5px;
+    background-color: var(--green-col);
+}
+
+/* --- END: University Carousel Section Styles --- */
+
+/* --- START: Flagship Projects Section Styles --- */
+
+.flagship-section {
+    position: relative; /* This is crucial for layering the background, overlay, and content */
+    padding: 6rem 1.5rem;
+    color: white;
+}
+
+.flagship-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%); /* Makes the image black and white */
+    z-index: -2; /* Places it behind everything */
+}
+
+.flagship-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 50, 45, 0.8); /* A dark, slightly green overlay */
+    z-index: -1; /* Places it on top of the image but behind the content */
+}
+
+.flagship-content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.flagship-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 3rem;
+}
+
+/* Two columns for medium screens and up */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--green-col); /* Uses the green color from your variables */
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--green-col);
+    margin-bottom: 1.5rem;
+    display: inline-block; /* Ensures the border only spans the text length */
+}
+
+.project-details p {
+    font-family: 'Merriweather', serif; /* Ensures body font is used */
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* --- END: Flagship Projects Section Styles --- */
+
+/* --- START: Power of Education Section Styles --- */
+
+.power-of-education-section {
+    background-color: var(--dark-background); /* Uses the light blue background from your variables */
+    padding: 2rem 1.5rem;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #0d2c4f; /* A dark, professional blue */
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    color: #5a6a7b; /* A soft, readable gray */
+    line-height: 1.7;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* On larger screens, create the V-shape layout */
+@media (min-width: 1024px) {
+    .features-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns for the top row */
+        gap: 4rem;
+    }
+
+    /* Target the third feature item */
+    .feature-item:nth-child(3) {
+        grid-column: 1 / -1; /* Make it span both columns */
+        justify-self: center; /* Center the grid item itself */
+        max-width: 50%; /* Constrain its width so it doesn't look too wide */
+    }
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-icon-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+/* Icon-specific colors */
+.icon-rocket { color: #f56565; } /* Red-Orange */
+.icon-globe { color: #4299e1; } /* Blue */
+.icon-educators { color: #9f7aea; } /* Purple */
+
+.feature-title {
+    font-size: 1.75rem;
+    color: #0d2c4f;
+    margin-bottom: 1rem;
+}
+
+.feature-description {
+    color: #5a6a7b;
+    line-height: 1.6;
+}
+
+/* --- END: Power of Education Section Styles --- */
+
+/* --- START: Core Values Section Styles --- */
+
+.core-values-section {
+    background-color: var(--light-back); /* Uses the very light gray/white from your variables */
+    padding: 6rem 1.5rem;
+    border-top: 1px solid #e5e7eb; /* Adds a subtle line separator */
+}
+
+.values-main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0d2c4f; /* Dark, professional blue */
+    margin-bottom: 4rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 3.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Three columns for medium screens and up */
+@media (min-width: 768px) {
+    .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+.value-item {
+    text-align: center;
+}
+
+.value-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 2rem auto;
+    border-radius: 50%; /* Make it a circle */
+    background-color: #e0e8f9; /* A very light blue background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value-icon {
+    font-size: 45px; /* This is the key change for Font Awesome */
+    color: var(--blue-col); /* Use your brand's blue color for the icon */
+}
+
+.value-title {
+    font-size: 1.75rem;
+    color: #0d2c4f;
+    margin-bottom: 1rem;
+}
+
+.value-description {
+    color: #5a6a7b; /* Soft, readable gray */
+    line-height: 1.6;
+    max-width: 350px; /* Prevents text from becoming too wide in each column */
+    margin: 0 auto;
+}
+
+/* --- END: Core Values Section Styles --- */
+
+/* --- START: Latest Insights & News Section Styles --- */
+
+.insights-section {
+    background-color: var(--dark-background);
+    padding: 6rem 1.5rem;
+}
+
+.insights-main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0d2c4f;
+    margin-bottom: 4rem;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Three columns for larger screens */
+@media (min-width: 768px) {
+    .insights-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+}
+@media (min-width: 1024px) {
+    .insights-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
+    }
+}
+
+.insight-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image-wrapper {
+    position: relative;
+    height: 220px; /* Fixed height for the image container */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s;
+}
+
+.insight-card:hover .card-image-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-title-on-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+    z-index: 2;
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows the card body to grow and push the link down */
+}
+
+.card-date {
+    color: var(--blue-col);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card-excerpt {
+    color: #5a6a7b;
+    line-height: 1.6;
+    flex-grow: 1; /* Pushes the link to the bottom */
+    margin-bottom: 1.5rem;
+}
+
+.read-more-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--blue-col);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.read-more-link:hover {
+    color: var(--green-col);
+}
+
+.arrow-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.3s;
+}
+
+.read-more-link:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* --- END: Latest Insights & News Section Styles --- */
+
+/* --- START: Get In Touch Section Styles --- */
+
+.contact-section {
+    background-color: var(--light-back);
+    padding: 2rem 1.5rem;
+}
+
+.contact-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.contact-main-title {
+    font-size: 2.5rem;
+    color: #0d2c4f;
+    margin-bottom: 1rem;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: #5a6a7b;
+    line-height: 1.7;
+}
+
+.contact-form {
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1.5rem;
+}
+
+/* Two columns for larger screens */
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Makes an item span the full width of the grid */
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-label {
+    color: #5a6a7b;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--blue-col);
+    box-shadow: 0 0 0 3px rgba(57, 152, 189, 0.2);
+}
+
+.form-textarea {
+    resize: vertical; /* Allows vertical resizing only */
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.submit-button {
+    background-color: var(--blue-col); 
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 9999px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: var(--green-col); 
+    transform: translateY(-2px);
+}
+
+/* --- END: Get In Touch Section Styles --- */

@@ -1,0 +1,673 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+:root{
+    --blue-col:#3998BD;
+    --green-col:#8EC86F;
+    --dark-background:#D6E9EC;
+    --light-back:#F5F9FB;
+    --white:#fff;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; 
+}
+/* --- START: About Page Specific Styles --- */
+
+/* 1. Correct height for the hero section */
+.about-hero-section {
+    height: 80vh; /* Increased height to make the next section visible */
+    display: flex; /* Enables flexbox for alignment */
+    align-items: flex-end; /* Aligns content to the bottom */
+}
+
+/* 2. Re-using the text container style from your homepage */
+.about-hero-section .text-content-container {
+    width: 100%;
+    padding: 5rem 1.5rem; /* Default padding */
+    color: var(--white);
+}
+
+/* Responsive padding for larger screens */
+@media (min-width: 768px) {
+    .about-hero-section .text-content-container {
+        padding: 6rem 3rem;
+    }
+}
+@media (min-width: 1024px) {
+    .about-hero-section .text-content-container {
+        padding: 6rem 6rem; 
+    }
+}
+
+/* 3. Correct styles for the mouse icon on a light background */
+.wwa .mouse-icon {
+  border: 2px solid #374151; /* Dark color */
+  border-radius: 16px;
+  height: 40px;
+  width: 24px;
+  display: block;
+  margin: 0 auto 1.5rem auto; /* Center it and add space below */
+}
+
+.wwa .mouse-icon .wheel {
+  position: relative;
+  border-radius: 10px;
+  background: #374151; /* Dark color */
+  width: 2px;
+  height: 6px;
+  top: 4px;
+  margin: 0 auto;
+  -webkit-animation: drop 1.4s linear infinite;
+  animation: drop 1.4s linear infinite;
+}
+.video-sect{
+    background: var(--light-back);
+}
+
+/* 4. The animation definition */
+@-webkit-keyframes drop {
+  0%   { top: 4px; opacity: 1; }
+  100% { top: 20px; opacity: 0; }
+}
+
+@keyframes drop {
+  0%   { top: 4px; opacity: 1; }
+  100% { top: 20px; opacity: 0; }
+}
+
+/* --- END: About Page Specific Styles --- */
+
+/* --- START: About Intro & Map Section Styles --- */
+
+.about-intro-section {
+    padding: 4rem 1.5rem;
+}
+
+.intro-grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Two columns for larger screens */
+@media (min-width: 1024px) {
+    .intro-grid-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.intro-text p {
+    color: #5a6a7b;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.map-container {
+    text-align: center; /* Center the map image */
+}
+
+.map-container img {
+    max-width: 100%;
+    height: auto; /* Make the image responsive */
+}
+
+/* --- END: About Intro & Map Section Styles --- */
+
+/* --- START: Mission & Vision Section Styles --- */
+
+.mission-vision-section {
+    background-color: var(--light-back);
+    padding: 4rem 1.5rem 6rem 1.5rem; /* Top and bottom padding */
+}
+
+.mission-vision-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Switch to two columns on larger screens */
+@media (min-width: 768px) {
+    .mission-vision-container {
+        grid-template-columns: 1fr 1fr; /* 50/50 split */
+        gap: 4rem;
+    }
+}
+
+.mission-item, .vision-item {
+    padding: 2rem;
+    border-left: 4px solid var(--green-col); /* Accent border */
+}
+
+.mission-title, .vision-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #0d2c4f; /* Dark, professional blue */
+    margin-bottom: 1.5rem;
+}
+
+.mission-description, .vision-description {
+    color: #5a6a7b; /* Soft, readable gray */
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+/* --- START: Mission & Vision Icon Styles (Updated for Font Awesome) --- */
+
+.title-with-icon {
+    display: flex;
+    align-items: center; /* Vertically aligns the icon and title */
+    gap: 1rem; /* Space between the icon and the title */
+    margin-bottom: 1.5rem; /* Replaces the margin from the title */
+}
+
+.mission-vision-icon {
+    font-size: 40px; /* Controls the size of the Font Awesome icon */
+    color: var(--blue-col); /* Uses your brand's blue color */
+    width: 45px; /* Ensures consistent alignment */
+    text-align: center;
+}
+
+/* We move the margin from the title to the wrapper */
+.mission-title, .vision-title {
+    margin-bottom: 0; 
+}
+
+/* --- END: Mission & Vision Section Styles --- */
+
+/* --- START: Leadership Team Section Styles --- */
+
+.leadership-section {
+    background-color: var(--dark-background); /* Light blue background */
+    padding: 5rem 0;
+}
+
+.leadership-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+}
+
+.leadership-main-title {
+    font-size: 2.5rem;
+    color: #0d2c4f;
+    margin-bottom: 1rem;
+}
+
+.leadership-intro {
+    font-size: 1.1rem;
+    color: #5a6a7b;
+    line-height: 1.7;
+}
+
+/* Swiper container adjustments */
+.leadership-swiper {
+    padding-bottom: 4rem !important; /* Add padding at the bottom for pagination */
+}
+
+.team-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 50%;
+    background-color: #f3f4f6; /* Light gray background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #9ca3af; /* Gray icon color */
+}
+
+.team-member-name {
+    font-size: 1.5rem;
+    color: var(--blue-col);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.team-member-title {
+    color: var(--green-col);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.team-member-bio {
+    color: #5a6a7b;
+    line-height: 1.6;
+    flex-grow: 1; /* Pushes the 'Read More' link to the bottom */
+    margin-bottom: 1.5rem;
+}
+
+/* Pagination for this specific swiper */
+.leadership-swiper .swiper-pagination {
+    bottom: 10px !important; /* Position pagination at the very bottom */
+}
+
+.leadership-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #a3a3a3;
+    opacity: 0.8;
+}
+
+.leadership-swiper .swiper-pagination-bullet-active {
+    background-color: var(--green-col);
+}
+
+/* --- END: Leadership Team Section Styles --- */
+
+
+/* --- START: Team Modal Styles --- */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+}
+
+body.modal-open {
+    overflow: hidden; /* Prevents background from scrolling */
+}
+
+body.modal-open .modal-overlay {
+    display: flex; /* Show the modal */
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 0.75rem;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 2rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #9ca3af;
+    cursor: pointer;
+    line-height: 1;
+}
+.modal-close:hover {
+    color: #374151;
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack on mobile */
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .modal-grid {
+        grid-template-columns: 1fr 3fr; /* 1 part image, 3 parts text */
+        gap: 2rem;
+    }
+    .modal-content {
+        padding: 3rem;
+    }
+}
+
+.modal-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    color: #e5e7eb;
+}
+
+.modal-name {
+    font-size: 2.25rem;
+    color: var(--blue-col);
+    margin-bottom: 0.25rem;
+}
+
+.modal-title {
+    font-size: 1.1rem;
+    color: var(--green-col);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.modal-bio p {
+    color: #5a6a7b;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* --- END: Team Modal Styles --- */
+
+/* --- START: Investor Section Styles --- */
+
+.investor-section {
+    background-color: white;
+    padding: 6rem 1.5rem;
+    border-top: 1px solid #e5e7eb; /* Separator line */
+}
+
+.investor-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.investor-main-title {
+    font-size: 2.5rem;
+    color: #0d2c4f;
+}
+
+.investor-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Two columns for larger screens */
+@media (min-width: 768px) {
+    .investor-grid {
+        grid-template-columns: 2fr 1fr; /* Text takes 2/3, logo takes 1/3 */
+        gap: 4rem;
+    }
+}
+
+.investor-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--blue-col);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--green-col);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.investor-text p {
+    color: #5a6a7b;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.investor-logo-wrapper {
+    text-align: center; /* Center logo on mobile */
+}
+
+.investor-logo {
+    max-width: 250px; /* Control the max size of the logo */
+    width: 100%;
+    height: auto;
+    margin: 0 auto; /* Center the logo within its container */
+}
+
+/* --- END: Investor Section Styles --- */
+
+/* --- START: Get In Touch Section Styles --- */
+
+.contact-section {
+    background-color: var(--dark-background);
+    padding: 2rem 1.5rem;
+}
+
+.contact-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.contact-main-title {
+    font-size: 2.5rem;
+    color: #0d2c4f;
+    margin-bottom: 1rem;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: #5a6a7b;
+    line-height: 1.7;
+}
+
+.contact-form {
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1.5rem;
+}
+
+/* Two columns for larger screens */
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Makes an item span the full width of the grid */
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-label {
+    color: #5a6a7b;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--blue-col);
+    box-shadow: 0 0 0 3px rgba(57, 152, 189, 0.2);
+}
+
+.form-textarea {
+    resize: vertical; /* Allows vertical resizing only */
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.submit-button {
+    background-color: var(--blue-col); 
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 9999px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: var(--green-col); 
+    transform: translateY(-2px);
+}
+
+/* --- END: Get In Touch Section Styles --- */
+
+/* --- START: Footer Section Styles --- */
+
+.site-footer {
+    background-color: #0d2c4f; /* A dark, professional blue */
+    color: #a0aec0; /* Light gray text for readability */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+/* Responsive grid for tablets and desktops */
+@media (min-width: 640px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.footer-logo {
+    height: 4rem; /* 64px */
+    filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
+.footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #a0aec0;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--green-col);
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.contact-item i {
+    color: var(--green-col);
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #2d3748; /* Darker separator line */
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row; /* Side-by-side on larger screens */
+        justify-content: space-between;
+    }
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.25rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--green-col);
+    transform: translateY(-2px);
+}
+
+/* --- END: Footer Section Styles --- */

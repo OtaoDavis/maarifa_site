@@ -1,0 +1,125 @@
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+:root{
+    --blue-col:#3998BD;
+    --green-col:#8EC86F;
+    --dark-background:#D6E9EC;
+    --light-back:#F5F9FB;
+    --white:#fff;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; 
+}
+.hero-swiper .swiper-slide {
+    position: relative; 
+}
+
+.hero-swiper .text-content-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: flex-start;
+    padding: 5rem 1.5rem; 
+    color: var(--white);
+}
+
+/* Responsive padding for larger screens */
+@media (min-width: 768px) {
+    .hero-swiper .text-content-container {
+        padding: 6rem 3rem;
+    }
+}
+@media (min-width: 1024px) {
+    .hero-swiper .text-content-container {
+        padding: 6rem 6rem; 
+    }
+}
+.swiper-button-next, .swiper-button-prev {
+    color: #ffffff; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px; /* Smaller arrow icons */
+    font-weight: 900;
+}
+
+.wwa{
+    background-color: var(--dark-background);
+}
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+    display: none;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.about-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #a3a3a3; 
+    opacity: 0.8;
+    transition: background-color 0.3s;
+}
+
+.about-swiper .swiper-pagination-bullet-active {
+    background-color: #71a857; 
+}
