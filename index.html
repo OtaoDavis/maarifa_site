@@ -144,65 +144,96 @@
         </div>
     </section>
 
-    <!-- START: Our Approach Section (Replaces the old "Who We Are" Swiper) -->
+    <!-- START: Our Approach Carousel Section -->
     <section class="our-approach-section">
-        <div class="container mx-auto px-6">
-            <!-- The grid that holds the four cards -->
-            <div class="approach-grid">
+        <div class="container mx-auto">
+        </div>
 
-                <!-- Card 1: The Problem -->
-                <div class="approach-card">
-                    <div class="approach-icon">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+        <div class="swiper approach-swiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1: The Problem -->
+                <div class="swiper-slide">
+                    <div class="approach-grid">
+                        <div class="approach-image">
+                            <img src="images/cz4.JPG"
+                                alt="Students facing a challenge">
+                        </div>
+                        <div class="approach-quote">
+                            <div class="quote-mark-bg">“</div>
+                            <blockquote class="quote-text">
+                                Limited access to high-quality, market-relevant education and scarce opportunities for
+                                employment.
+                            </blockquote>
+                            <cite class="quote-author">The Problem</cite>
+                            <p class="quote-author-title">The Challenge We Address</p>
+                        </div>
                     </div>
-                    <h3 class="approach-card-title">The Problem</h3>
-                    <p class="approach-card-text">
-                        Africa's youth face significant hurdles, including limited access to high-quality,
-                        market-relevant education and scarce opportunities for gainful employment or entrepreneurship.
-                    </p>
                 </div>
 
-                <!-- Card 2: The Opportunity -->
-                <div class="approach-card">
-                    <div class="approach-icon">
-                        <i class="fa-solid fa-lightbulb"></i>
+                <!-- Slide 2: The Opportunity -->
+                <div class="swiper-slide">
+                    <div class="approach-grid">
+                        <div class="approach-image">
+                            <img src="images/Students.jpg"
+                                alt="Students collaborating with technology">
+                        </div>
+                        <div class="approach-quote">
+                            <div class="quote-mark-bg">“</div>
+                            <blockquote class="quote-text">
+                                Leveraging Africa's large, digitally-native youth demographic to drive economic and
+                                intellectual growth.
+                            </blockquote>
+                            <cite class="quote-author">The Opportunity</cite>
+                            <p class="quote-author-title">Harnessing Dynamic Potential</p>
+                        </div>
                     </div>
-                    <h3 class="approach-card-title">The Opportunity</h3>
-                    <p class="approach-card-text">
-                        We see vast potential in Africa's large, digitally-native youth demographic. By leveraging
-                        technology and globalization, we can enhance education and drive economic growth across the
-                        continent.
-                    </p>
                 </div>
 
-                <!-- Card 3: Our Purpose -->
-                <div class="approach-card">
-                    <div class="approach-icon">
-                        <i class="fa-solid fa-bullseye"></i>
+                <!-- Slide 3: Our Purpose -->
+                <div class="swiper-slide">
+                    <div class="approach-grid">
+                        <div class="approach-image">
+                            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=800&auto=format&fit=crop"
+                                alt="Focused student in a library">
+                        </div>
+                        <div class="approach-quote">
+                            <div class="quote-mark-bg">“</div>
+                            <blockquote class="quote-text">
+                                To pioneer a new model of African university that prepares every student for global
+                                success and unlocks Africa's potential.
+                            </blockquote>
+                            <cite class="quote-author">Our Purpose</cite>
+                            <p class="quote-author-title">Building More Than a University</p>
+                        </div>
                     </div>
-                    <h3 class="approach-card-title">Our Purpose</h3>
-                    <p class="approach-card-text">
-                        We are pioneering a new model of African university, one designed to prepare each student for
-                        global employment and entrepreneurship, unlocking Africa’s immense economic potential.
-                    </p>
                 </div>
 
-                <!-- Card 4: Our Solution -->
-                <div class="approach-card">
-                    <div class="approach-icon">
-                        <i class="fa-solid fa-gears"></i>
+                <!-- Slide 4: Our Solution -->
+                <div class="swiper-slide">
+                    <div class="approach-grid">
+                        <div class="approach-image">
+                            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop"
+                                alt="Diverse team working together on a solution">
+                        </div>
+                        <div class="approach-quote">
+                            <div class="quote-mark-bg">“</div>
+                            <blockquote class="quote-text">
+                                A student-centered model built on holistic education, apprenticeship-driven learning,
+                                and pathways to global employment.
+                            </blockquote>
+                            <cite class="quote-author">Our Solution</cite>
+                            <p class="quote-author-title">A Three-Pillar Strategy</p>
+                        </div>
                     </div>
-                    <h3 class="approach-card-title">Our Solution</h3>
-                    <p class="approach-card-text">
-                        Our student-centered model is built on three pillars: holistic education, apprenticeship-driven
-                        learning, and creating clear pathways to global employment and entrepreneurship.
-                    </p>
                 </div>
 
             </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination approach-pagination"></div>
         </div>
     </section>
-    <!-- END: Our Approach Section -->
+    <!-- END: Our Approach Carousel Section -->
 
     <section class="bg-white py-16 md:py-24" id="impact">
         <div class="container mx-auto px-6">
@@ -742,14 +773,15 @@
         slides.forEach(slide => {
             slide.classList.add('min-h-[70vh]');
         });
-        const aboutSwiper = new Swiper('.about-swiper', {
+        // --- Approach Swiper Initialization ---
+        const approachSwiper = new Swiper('.approach-swiper', {
             loop: true,
             autoplay: {
-                delay: 8000,
+                delay: 8000, // 8 seconds between slides
                 disableOnInteraction: false,
             },
             pagination: {
-                el: '.swiper-pagination',
+                el: '.approach-pagination',
                 clickable: true,
             },
         });
