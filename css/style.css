@@ -123,22 +123,68 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 
-.about-swiper .swiper-pagination-bullet {
-    width: 24px;
-    height: 24px;
-    background-color: #a3a3a3; 
-    opacity: 0.8;
-    transition: background-color 0.3s;
+/* --- START: Our Approach Section Styles --- */
+
+.our-approach-section {
+    background-color: var(--dark-background); /* Uses your light blue background color */
+    padding: 5rem 1.5rem;
 }
 
-.about-swiper .swiper-pagination-bullet-active {
-    background-color: #71a857; 
+.approach-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.about-swiper .swiper-pagination {
-    position: static; 
-    margin-top: 1.5rem; 
+/* 2 columns on tablets */
+@media (min-width: 768px) {
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
+/* 4 columns on desktops for a wide, impressive layout */
+@media (min-width: 1200px) {
+    .approach-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+.approach-card {
+    background-color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.approach-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.approach-icon {
+    font-size: 3rem;
+    color: var(--green-col); /* Using your brand's green for the icons */
+    margin-bottom: 1.5rem;
+}
+
+.approach-card-title {
+    font-size: 1.5rem;
+    color: #0d2c4f; /* Dark blue for strong titles */
+    margin-bottom: 1rem;
+}
+
+.approach-card-text {
+    color: #5a6a7b;
+    line-height: 1.7;
+}
+
+/* --- END: Our Approach Section Styles --- */
 
 /* --- START: University Carousel Section Styles  */
 
@@ -284,10 +330,9 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--green-col);
 }
 
-/* THE FIX for Pagination Centering and Spacing */
 .university-swiper .swiper-pagination {
     position: absolute;
-    bottom: 15px; /* Position from the bottom of the swiper container */
+    bottom: 15px; 
     left: 50%;
     z-index: 10;
 }

@@ -50,11 +50,14 @@
                 </li>
                 <li><a href="about.html" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">About
                         Us</a></li>
-                <li><a href="#impact" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Impact</a></li>
-                <li><a href="#universities" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Universities</a>
+                <li><a href="#impact" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Impact</a>
+                </li>
+                <li><a href="#universities"
+                        class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Universities</a>
                 </li>
                 <li><a href="#blog" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Blog</a></li>
-                <li><a href="#contact" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Contact</a></li>
+                <li><a href="#contact" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Contact</a>
+                </li>
             </ul>
 
             <!-- Menu Button-->
@@ -127,8 +130,8 @@
                 </div>
 
             </div>
-            <div class="swiper-button-next" style="color:#3998BD;"></div>
-            <div class="swiper-button-prev" style="color:#3998BD;"></div>
+            <!-- <div class="swiper-button-next" style="color:#3998BD;"></div>
+            <div class="swiper-button-prev" style="color:#3998BD;"></div> -->
         </div>
     </section>
 
@@ -141,81 +144,65 @@
         </div>
     </section>
 
-    <section class="bg-[#D6E9EC] py-16 md:py-24" id="approach">
+    <!-- START: Our Approach Section (Replaces the old "Who We Are" Swiper) -->
+    <section class="our-approach-section">
         <div class="container mx-auto px-6">
-            <div class="swiper about-swiper">
-                <div class="swiper-wrapper">
+            <!-- The grid that holds the four cards -->
+            <div class="approach-grid">
 
-                    <div class="swiper-slide">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
-                            <div class="text-gray-800">
-                                <h2 class="text-3xl font-bold mb-4 text-dark">The Problem</h2>
-                                <p class="mb-4">The core challenge for Africa’s youth is:</p>
-                                <ul class="list-disc list-inside space-y-2">
-                                    <li>Securing gainful employment or entrepreneurship.</li>
-                                    <li>Limited access to high quality, market relevant tertiary education.</li>
-                                    <li>Constrained mindset shaped by adverse social-economic and cultural conditions.
-                                    </li>
-                                    <li>Scarce opportunities for gainful employment & entrepreneurship in Sub-Saharan
-                                        Africa.</li>
-                                </ul>
-                            </div>
-
-                            <div class="text-gray-800">
-                                <h2 class="text-3xl font-bold mb-4 text-dark">The Opportunity for Transformation</h2>
-                                <p class="mb-4">Leveraging Africa's Dynamic Potential</p>
-                                <ul class="list-disc list-inside space-y-2">
-                                    <li>Africa's Youth: A large, digitally native, and entrepreneurial demographic.</li>
-                                    <li>Technology & Innovation: Tools to enhance education efficiency and foster new
-                                        enterprises.</li>
-                                    <li>Globalization: Access to global markets, education platforms, and mobility for
-                                        talent.</li>
-                                    <li>Transformative Impact: Potential to drive economic and intellectual growth
-                                        across the continent.</li>
-                                </ul>
-                            </div>
-                        </div>
+                <!-- Card 1: The Problem -->
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
                     </div>
-
-                    <!-- Slide 2: Purpose & Solution -->
-                    <div class="swiper-slide">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
-                            <!-- Column 1: Our Purpose -->
-                            <div class="text-gray-800">
-                                <h2 class="text-3xl font-bold mb-4 text-dark">OUR PURPOSE</h2>
-                                <p class="mb-4">We are building more than a university.</p>
-                                <p>We are pioneering a New Model of
-                                    an African university – one designed to prepare and help each student to achieve
-                                    gainful employment and entrepreneurship on a global scale, unlocking Africa’s vast
-                                    economic potential</p> <br>
-                                <p>This is a scalable model that anchors our mission to provide accessible, market
-                                    relevant and transformative education to Africa’s youth</p>
-                            </div>
-                            <!-- Column 2: Our Solution -->
-                            <div class="text-gray-800">
-                                <h2 class="text-3xl font-bold mb-4 text-dark">OUR SOLUTION</h2>
-                                <p class="mb-4">We are addressing Africa’s youth employment crisis through a
-                                    student-centered model built on three pillars</p>
-                                <ul class="list-disc list-inside space-y-3">
-                                    <li><strong>Holistic Education for the African Student:</strong> Our universities
-                                        nurture identity, values, and essential life skills to develop grounded purpose
-                                        driven graduates</li>
-                                    <li><strong>Apprenticeship-Driven, Skills-Based Learning:</strong> We emphasize
-                                        learning by doing –through real-world industry experience, innovation, and
-                                        collaboration</li>
-                                    <li><strong>Pathways to Global Employment and Entrepreneurship:</strong> We connect
-                                        students to local and global opportunities across employment and
-                                        entrepreneurship landscapes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
+                    <h3 class="approach-card-title">The Problem</h3>
+                    <p class="approach-card-text">
+                        Africa's youth face significant hurdles, including limited access to high-quality,
+                        market-relevant education and scarce opportunities for gainful employment or entrepreneurship.
+                    </p>
                 </div>
-                <div class="swiper-pagination"></div>
+
+                <!-- Card 2: The Opportunity -->
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="approach-card-title">The Opportunity</h3>
+                    <p class="approach-card-text">
+                        We see vast potential in Africa's large, digitally-native youth demographic. By leveraging
+                        technology and globalization, we can enhance education and drive economic growth across the
+                        continent.
+                    </p>
+                </div>
+
+                <!-- Card 3: Our Purpose -->
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="approach-card-title">Our Purpose</h3>
+                    <p class="approach-card-text">
+                        We are pioneering a new model of African university, one designed to prepare each student for
+                        global employment and entrepreneurship, unlocking Africa’s immense economic potential.
+                    </p>
+                </div>
+
+                <!-- Card 4: Our Solution -->
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="approach-card-title">Our Solution</h3>
+                    <p class="approach-card-text">
+                        Our student-centered model is built on three pillars: holistic education, apprenticeship-driven
+                        learning, and creating clear pathways to global employment and entrepreneurship.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
+    <!-- END: Our Approach Section -->
 
     <section class="bg-white py-16 md:py-24" id="impact">
         <div class="container mx-auto px-6">
