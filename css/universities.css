@@ -1,0 +1,334 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+:root{
+    --blue-col:#3998BD;
+    --green-col:#8EC86F;
+    --dark-background:#D6E9EC;
+    --light-back:#F5F9FB;
+    --white:#fff;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; 
+}
+
+/* --- START: University Page Template Styles --- */
+
+/* Hero Section for individual university pages */
+.university-hero-section {
+    height: 60vh; /* A strong, but not full-page, hero height */
+    background-size: cover;
+    background-position: center;
+}
+
+/* University Details & Map Section */
+.uni-details-section {
+    background-color: white;
+    padding: 5rem 1.5rem;
+}
+
+.uni-details-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .uni-details-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+}
+
+.uni-map-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.uni-facts h3 {
+    font-size: 1.75rem;
+    color: #0d2c4f;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--green-col);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.uni-facts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.uni-facts ul li {
+    font-size: 1.1rem;
+    color: #5a6a7b;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.uni-facts ul li::before {
+    content: '\f058'; /* Font Awesome solid circle check */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--green-col);
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+/* --- START: Interactive Faculties Section Styles --- */
+
+.faculties-section {
+    background-color: var(--light-back);
+    padding: 5rem 1.5rem;
+}
+
+.section-title-center {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0d2c4f;
+    margin-bottom: 3rem;
+}
+
+.faculties-interactive-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack on mobile */
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .faculties-interactive-container {
+        grid-template-columns: 1fr 2fr; /* 1/3 for tabs, 2/3 for content */
+        gap: 3rem;
+    }
+}
+
+/* Left Side: Tabs */
+.faculty-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.faculty-tab {
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    border-left: 4px solid #e5e7eb;
+    background-color: transparent;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #374151;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.faculty-tab:hover {
+    background-color: white;
+    border-left-color: var(--green-col);
+}
+
+.faculty-tab.active {
+    background-color: white;
+    color: var(--blue-col);
+    border-color: #e5e7eb;
+    border-left: 4px solid var(--blue-col);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* Right Side: Content Panels */
+.faculty-content {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2.5rem;
+    border: 1px solid #e5e7eb;
+    min-height: 300px;
+}
+
+.faculty-programs {
+    display: none; /* Hide all panels by default */
+    animation: fadeIn 0.5s ease;
+}
+
+.faculty-programs.active {
+    display: block; /* Show only the active panel */
+}
+
+.faculty-programs h4 {
+    font-size: 1.75rem;
+    color: var(--blue-col);
+    margin-bottom: 1.5rem;
+}
+
+.faculty-programs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faculty-programs ul li {
+    color: #5a6a7b;
+    padding-left: 1.75rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+}
+
+.faculty-programs ul li::before {
+    content: '\f105'; /* Font Awesome angle-right icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--green-col);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* Fade-in animation for content */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Style for the 'Apply Today' button in the faculties section --- */
+
+.faculty-apply-btn {
+    display: inline-block;
+    margin-top: 2rem; /* Adds space above the button */
+    background-color: var(--blue-col);
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px; /* Pill shape */
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.faculty-apply-btn:hover {
+    background-color: var(--green-col);
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+/* --- END: Interactive Faculties Section Styles --- */
+
+/* --- END: University Page Template Styles --- */
+
+/* --- START: Leadership Team Section Styles --- */
+
+.leadership-section {
+    background-color: var(--dark-background); /* Light blue background */
+    padding: 5rem 0;
+}
+
+.leadership-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+}
+
+.leadership-main-title {
+    font-size: 2.5rem;
+    color: #0d2c4f;
+    margin-bottom: 1rem;
+}
+
+.leadership-intro {
+    font-size: 1.1rem;
+    color: #5a6a7b;
+    line-height: 1.7;
+}
+
+/* Swiper container adjustments */
+.leadership-swiper {
+    padding-bottom: 4rem !important; /* Add padding at the bottom for pagination */
+}
+
+.team-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 50%;
+    background-color: #f3f4f6; /* Light gray background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #9ca3af; /* Gray icon color */
+}
+
+.team-member-name {
+    font-size: 1.5rem;
+    color: var(--blue-col);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.team-member-title {
+    color: var(--green-col);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.team-member-bio {
+    color: #5a6a7b;
+    line-height: 1.6;
+    flex-grow: 1; /* Pushes the 'Read More' link to the bottom */
+    margin-bottom: 1.5rem;
+}
+
+/* Pagination for this specific swiper */
+.leadership-swiper .swiper-pagination {
+    bottom: 10px !important; /* Position pagination at the very bottom */
+}
+
+.leadership-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #a3a3a3;
+    opacity: 0.8;
+}
+
+.leadership-swiper .swiper-pagination-bullet-active {
+    background-color: var(--green-col);
+}
+
+/* --- END: Leadership Team Section Styles --- */

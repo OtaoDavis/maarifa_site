@@ -50,12 +50,13 @@
                 </li>
                 <li><a href="about.html" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">About
                         Us</a></li>
-                <li><a href="#impact" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Impact</a>
+                <li><a href="partnerships.html"
+                        class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Partnerships</a>
                 </li>
                 <li><a href="#universities"
                         class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Universities</a>
                 </li>
-                <li><a href="#blog" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Blog</a></li>
+                <!-- <li><a href="#blog" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Blog</a></li> -->
                 <li><a href="#contact" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Contact</a>
                 </li>
             </ul>
@@ -74,9 +75,9 @@
             <ul class="absolute flex flex-col w-auto py-3 space-y-2 bg-white rounded-lg shadow-xl right-6 navlist">
                 <li><a href="index.html" class="block px-6 py-2 hover:text-[#8EC86F]">Home</a></li>
                 <li><a href="about.html" class="block px-6 py-2 hover:text-[#8EC86F]">About Us</a></li>
-                <li><a href="#impact" class="block px-6 py-2 hover:text-[#8EC86F]">Impact</a></li>
+                <li><a href="partnerships.html" class="block px-6 py-2 hover:text-[#8EC86F]">Partnerships</a></li>
                 <li><a href="#universities" class="block px-6 py-2 hover:text-[#8EC86F]">Universities</a></li>
-                <li><a href="#blog" class="block px-6 py-2 hover:text-[#8EC86F]">Blog</a></li>
+                <!-- <li><a href="#blog" class="block px-6 py-2 hover:text-[#8EC86F]">Blog</a></li> -->
                 <li><a href="#contact" class="block px-6 py-2 hover:text-[#8EC86F]">Contact</a></li>
             </ul>
         </div>
@@ -135,105 +136,126 @@
         </div>
     </section>
 
-    <section class="py-4 wwa">
+    <!-- <section class="py-4 wwa">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-dark">WHO WE ARE</h2> <br>
             <p class="text-center text-dark">Africa Education Holding (AEH) is a tertiary education company</p>
             <p class="text-center text-dark">that provides accessible and transformative education in Sub Saharan Africa
             </p>
         </div>
-    </section>
+    </section> -->
 
-    <!-- START: Our Approach Carousel Section -->
-    <section class="our-approach-section">
-        <div class="container mx-auto">
-        </div>
-
-        <div class="swiper approach-swiper">
-            <div class="swiper-wrapper">
-
-                <!-- Slide 1: The Problem -->
-                <div class="swiper-slide">
-                    <div class="approach-grid">
-                        <div class="approach-image">
-                            <img src="images/cz4.JPG"
-                                alt="Students facing a challenge">
-                        </div>
-                        <div class="approach-quote">
-                            <div class="quote-mark-bg">“</div>
-                            <blockquote class="quote-text">
-                                Limited access to high-quality, market-relevant education and scarce opportunities for
-                                employment.
-                            </blockquote>
-                            <cite class="quote-author">The Problem</cite>
-                            <p class="quote-author-title">The Challenge We Address</p>
-                        </div>
+    <!-- START: The Problem Section -->
+    <section class="problem-section">
+        <div class="problem-container">
+            <!-- Left Column: Interactive Cards -->
+            <div class="problem-cards-wrapper">
+                <!-- Card 1: Limited Access -->
+                <div class="problem-card active-card" data-title="The Problem We Are Solving"
+                    data-content="The core challenge for Africa’s youth is securing gainful employment or entrepreneurship.">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="card-text">
+                        <h4>Limited Access</h4>
+                        <p>to high quality market-relevant tertiary education</p>
                     </div>
                 </div>
 
-                <!-- Slide 2: The Opportunity -->
-                <div class="swiper-slide">
-                    <div class="approach-grid">
-                        <div class="approach-image">
-                            <img src="images/Students.jpg"
-                                alt="Students collaborating with technology">
-                        </div>
-                        <div class="approach-quote">
-                            <div class="quote-mark-bg">“</div>
-                            <blockquote class="quote-text">
-                                Leveraging Africa's large, digitally-native youth demographic to drive economic and
-                                intellectual growth.
-                            </blockquote>
-                            <cite class="quote-author">The Opportunity</cite>
-                            <p class="quote-author-title">Harnessing Dynamic Potential</p>
-                        </div>
+                <!-- Card 2: Constrained Mindset -->
+                <div class="problem-card" data-title="Constrained Mindset"
+                    data-content="A constrained mindset, shaped by adverse social-economic, cultural and political conditions, often limits the potential of young individuals.">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div class="card-text">
+                        <h4>Constrained Mindset</h4>
+                        <p>shaped by adverse social-economic conditions</p>
                     </div>
                 </div>
 
-                <!-- Slide 3: Our Purpose -->
-                <div class="swiper-slide">
-                    <div class="approach-grid">
-                        <div class="approach-image">
-                            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=800&auto=format&fit=crop"
-                                alt="Focused student in a library">
-                        </div>
-                        <div class="approach-quote">
-                            <div class="quote-mark-bg">“</div>
-                            <blockquote class="quote-text">
-                                To pioneer a new model of African university that prepares every student for global
-                                success and unlocks Africa's potential.
-                            </blockquote>
-                            <cite class="quote-author">Our Purpose</cite>
-                            <p class="quote-author-title">Building More Than a University</p>
-                        </div>
+                <!-- Card 3: Scarce Opportunities -->
+                <div class="problem-card" data-title="Scarce Opportunities"
+                    data-content="There are scarce opportunities for gainful employment and entrepreneurship in Sub-Saharan Africa, creating a significant barrier to economic progress.">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div class="card-text">
+                        <h4>Scarce Opportunities</h4>
+                        <p>for gainful employment and entrepreneurship</p>
                     </div>
                 </div>
-
-                <!-- Slide 4: Our Solution -->
-                <div class="swiper-slide">
-                    <div class="approach-grid">
-                        <div class="approach-image">
-                            <img src="images/home4.jpg"
-                                alt="Diverse team working together on a solution">
-                        </div>
-                        <div class="approach-quote">
-                            <div class="quote-mark-bg">“</div>
-                            <blockquote class="quote-text">
-                                A student-centered model built on holistic education, apprenticeship-driven learning,
-                                and pathways to global employment.
-                            </blockquote>
-                            <cite class="quote-author">Our Solution</cite>
-                            <p class="quote-author-title">A Three-Pillar Strategy</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination approach-pagination"></div>
+
+            <!-- Right Column: Dynamic Content Display -->
+            <div class="problem-content-display">
+                <h2 id="problem-title">The Problem We Are Solving</h2>
+                <p id="problem-content">
+                    The core challenge for Africa’s youth is securing gainful employment or entrepreneurship.
+                </p>
+                <button id="reset-problem-btn" class="reset-button" style="display: none;">
+                    <i class="fa-solid fa-rotate-left"></i> Back to The Core Challenge
+                </button>
+            </div>
         </div>
     </section>
-    <!-- END: Our Approach Carousel Section -->
+    <!-- END: The Problem Section -->
+
+    <!-- START: Floating Solution Sections -->
+
+    <!-- START: Our Solution Title Section -->
+    <section class="solution-title-section">
+        <div class="container mx-auto px-6">
+            <h2 class="section-main-title">Our Solution</h2>
+        </div>
+    </section>
+    <!-- END: Our Solution Title Section -->
+    <!-- Solution 1: Holistic Education -->
+    <section class="solution-section-v2">
+        <div class="solution-image-container">
+            <img src="images/edu.jpg"
+                alt="Students collaborating in a modern learning environment">
+
+            <a href="#" class="solution-card-v2 left">
+                <h3>Holistic Education for the African Student</h3>
+                <p>We nurture identity, values, and essential life skills to develop grounded, purpose-driven graduates
+                    who are rooted in African culture, community, and ethical frameworks.</p>
+                <!-- <span class="solution-read-more">See what makes us different</span> -->
+            </a>
+        </div>
+    </section>
+
+    <!-- Solution 2: Apprenticeship-Driven Learning -->
+    <section class="solution-section-v2">
+        <div class="solution-image-container">
+            <img src="images/appre.jpg"
+                alt="Team working on a project with sticky notes">
+
+            <a href="#" class="solution-card-v2 right">
+                <h3>Apprenticeship-Driven, Skills-Based Learning</h3>
+                <p>We emphasize learning by doing through real-world industry experience, innovation, and collaboration,
+                    fostering entrepreneurship through practical problem-solving.</p>
+                <!-- <span class="solution-read-more">See what makes us different</span> -->
+            </a>
+        </div>
+    </section>
+
+    <!-- Solution 3: Pathways to Employment -->
+    <section class="solution-section-v2">
+        <div class="solution-image-container">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1920&auto-format&fit=crop"
+                alt="Professionals shaking hands in a global business setting">
+
+            <a href="#" class="solution-card-v2 left">
+                <h3>Pathways to Global Employment & Entrepreneurship</h3>
+                <p>We connect students to local and global opportunities, providing access to experiential learning
+                    platforms, internships, and international innovation ecosystems.</p>
+                <!-- <span class="solution-read-more">See what makes us different</span> -->
+            </a>
+        </div>
+    </section>
+
+    <!-- END: Floating Solution Sections -->
 
     <section class="bg-white py-16 md:py-24" id="impact">
         <div class="container mx-auto px-6">
@@ -315,7 +337,7 @@
                                     <p>To transform and inspire students to reach their full potential in employment,
                                         entrepreneurship, and ethical leadership.</p>
                                 </div>
-                                <a href="https://www.cavendish.ac.ug" class="learn-more-btn">Visit Website</a>
+                                <a href="universities/cuu.html" class="learn-more-btn">Learn More</a>
                             </div>
                         </div>
                         <!-- Right Half: Cavendish University Zambia -->
@@ -348,7 +370,7 @@
                                     <p>To increase access to high-quality education that transforms students into
                                         responsible, educated, employable, and entrepreneurial citizens.</p>
                                 </div>
-                                <a href="https://www.cavendishza.org" class="learn-more-btn">Visit Website</a>
+                                <a href="universities/cuz.html" class="learn-more-btn">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -387,7 +409,7 @@
                                     <p>To train a new generation of African leaders who are open to the world and
                                         equipped to meet the challenges of globalization and development.</p>
                                 </div>
-                                <a href="https://www.groupeiam.com" class="learn-more-btn">Visit Website</a>
+                                <a href="universities/iam-senegal.html" class="learn-more-btn">Learn More</a>
                             </div>
                         </div>
                         <!-- Right Half: IAM University Bamako -->
@@ -420,7 +442,7 @@
                                     <p>To provide managers with the skills and cross-cultural perspectives needed to
                                         foster development and competitiveness in the region.</p>
                                 </div>
-                                <a href="https://iambamako.com" class="learn-more-btn">Visit Website</a>
+                                <a href="universities/iam-mali.html" class="learn-more-btn">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -430,6 +452,66 @@
         </div>
     </section>
     <!-- END: University Carousel Section -->
+
+    <!-- START: Admissions Section -->
+    <section class="admissions-section">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="admissions-header">
+                <h2 class="admissions-main-title">Apply for Admission</h2>
+                <p class="admissions-intro">
+                    Begin your journey with us. Select a university below to start your application and unlock your
+                    potential.
+                </p>
+            </div>
+
+            <!-- University Choices Grid -->
+            <div class="admissions-grid">
+
+                <!-- Choice 1: Cavendish University Uganda -->
+                <div class="admission-card">
+                    <div class="admission-card-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="admission-uni-name">Cavendish University Uganda</h3>
+                    <p class="admission-uni-location">Kampala, Uganda</p>
+                    <a href="https://www.cavendish.ac.ug/admissions/admission-requirements" class="apply-now-btn">Apply Now</a>
+                </div>
+
+                <!-- Choice 2: Cavendish University Zambia -->
+                <div class="admission-card">
+                    <div class="admission-card-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="admission-uni-name">Cavendish University Zambia</h3>
+                    <p class="admission-uni-location">Lusaka, Zambia</p>
+                    <a href="https://www.cavendishza.org/application-requirements" class="apply-now-btn">Apply Now</a>
+                </div>
+
+                <!-- Choice 3: IAM University, Senegal -->
+                <div class="admission-card">
+                    <div class="admission-card-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="admission-uni-name">IAM University, Senegal</h3>
+                    <p class="admission-uni-location">Dakar, Senegal</p>
+                    <a href="https://www.groupeiam.com/admission" class="apply-now-btn">Apply Now</a>
+                </div>
+
+                <!-- Choice 4: IAM University, Mali -->
+                <div class="admission-card">
+                    <div class="admission-card-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="admission-uni-name">IAM University, Mali</h3>
+                    <p class="admission-uni-location">Bamako, Mali</p>
+                    <a href="https://www.groupeiam.com/admission" class="apply-now-btn">Apply Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END: Admissions Section -->
 
     <!-- START: Flagship Projects Section -->
     <section class="flagship-section">
@@ -604,17 +686,14 @@
     </section>
     <!-- END: Core Values Section -->
 
-    <!-- START: Latest Insights & News Section -->
+    <!-- START: Latest Insights & News Section 
     <section class="insights-section" id="blog">
         <div class="container mx-auto px-6">
 
-            <!-- Section Header -->
             <h2 class="insights-main-title">Latest Insights & News</h2>
-
-            <!-- Insights Grid -->
             <div class="insights-grid">
 
-                <!-- Card 1 -->
+                <!-- Card 1 
                 <div class="insight-card">
                     <div class="card-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop"
@@ -641,7 +720,7 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Card 2 
                 <div class="insight-card">
                     <div class="card-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop"
@@ -667,7 +746,7 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Card 3 
                 <div class="insight-card">
                     <div class="card-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?q=80&w=800&auto=format&fit=crop"
@@ -699,7 +778,7 @@
     <!-- END: Latest Insights & News Section -->
 
     <!-- START: Get In Touch Section -->
-    <section class="contact-section" id="contact">
+    <section class="contact-section" id="contact" style="background-color: #D6E9EC;">
         <div class="container mx-auto px-6">
 
             <!-- Section Header -->
@@ -767,9 +846,9 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="#impact">Impact</a></li>
+                        <li><a href="partnerships.html">Partnerships</a></li>
                         <li><a href="#universities">Universities</a></li>
-                        <li><a href="#blog">Blog</a></li>
+                        <!-- <li><a href="#blog">Blog</a></li> -->
                     </ul>
                 </div>
 
@@ -830,6 +909,7 @@
             fadeEffect: {
                 crossFade: true
             },
+            speed: 1500,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
@@ -841,20 +921,52 @@
         });
         const slides = document.querySelectorAll('.hero-swiper .swiper-slide');
         slides.forEach(slide => {
-            slide.classList.add('min-h-[70vh]');
+            slide.classList.add('min-h-[80vh]');
         });
-        // --- Approach Swiper Initialization ---
-        const approachSwiper = new Swiper('.approach-swiper', {
-            loop: true,
-            autoplay: {
-                delay: 8000, // 8 seconds between slides
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.approach-pagination',
-                clickable: true,
-            },
-        });
+        // --- Interactive Problem Section Logic ---
+        const problemCards = document.querySelectorAll('.problem-card');
+        const problemTitle = document.getElementById('problem-title');
+        const problemContent = document.getElementById('problem-content');
+        const resetButton = document.getElementById('reset-problem-btn');
+
+        if (problemCards.length > 0 && problemTitle && problemContent && resetButton) {
+            const initialTitle = problemTitle.textContent;
+            const initialContent = problemContent.textContent;
+
+            problemCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    // Remove active class from all cards
+                    problemCards.forEach(c => c.classList.remove('active-card'));
+                    // Add active class to the clicked card
+                    this.classList.add('active-card');
+
+                    // Get new content from data attributes
+                    const newTitle = this.dataset.title;
+                    const newContent = this.dataset.content;
+
+                    // Update the display area
+                    problemTitle.textContent = newTitle;
+                    problemContent.textContent = newContent;
+
+                    // Show the reset button
+                    resetButton.style.display = 'inline-flex';
+                });
+            });
+
+            // Add click event for the reset button
+            resetButton.addEventListener('click', function () {
+                problemCards.forEach(c => c.classList.remove('active-card'));
+                // Set the first card as active again
+                problemCards[0].classList.add('active-card');
+
+                // Reset to initial content
+                problemTitle.textContent = initialTitle;
+                problemContent.textContent = initialContent;
+
+                // Hide the reset button
+                resetButton.style.display = 'none';
+            });
+        }
         // --- University Swiper ---
         const universitySwiper = new Swiper('.university-swiper', {
             loop: true,
