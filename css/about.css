@@ -198,10 +198,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- END: Mission & Vision Section Styles --- */
 
-/* --- START: Leadership Team Section Styles --- */
+/* --- START: Leadership Team Section Styles (with Image Fallback) --- */
 
 .leadership-section {
-    background-color: var(--dark-background); /* Light blue background */
+    background-color: var(--dark-background);
     padding: 5rem 0;
 }
 
@@ -223,9 +223,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.7;
 }
 
-/* Swiper container adjustments */
 .leadership-swiper {
-    padding-bottom: 4rem !important; /* Add padding at the bottom for pagination */
+    padding-bottom: 4rem !important;
 }
 
 .team-card {
@@ -239,17 +238,33 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
 }
 
-.team-card-icon {
-    width: 80px;
-    height: 80px;
+/* Container for both image and fallback icon */
+.team-card-image {
+    position: relative; 
+    width: 100px;
+    height: 100px;
     margin: 0 auto 1.5rem auto;
     border-radius: 50%;
-    background-color: #f3f4f6; /* Light gray background */
+    background-color: #f3f4f6;
+    border: 3px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
-    color: #9ca3af; /* Gray icon color */
+    overflow: hidden;
+}
+
+.team-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-card-image .fallback-icon {
+    position: absolute; /* Positioned inside the container */
+    font-size: 3rem;
+    color: #9ca3af;
+    display: none; /* Hidden by default */
 }
 
 .team-member-name {
@@ -268,20 +283,20 @@ h1, h2, h3, h4, h5, h6 {
 .team-member-bio {
     color: #5a6a7b;
     line-height: 1.6;
-    flex-grow: 1; /* Pushes the 'Read More' link to the bottom */
+    flex-grow: 1;
     margin-bottom: 1.5rem;
 }
 
-/* Pagination for this specific swiper */
-.leadership-swiper .swiper-pagination {
-    bottom: 10px !important; /* Position pagination at the very bottom */
+.read-more-link {
+    color: var(--blue-col);
+    font-weight: bold;
+}
+.read-more-link:hover {
+    color: var(--green-col);
 }
 
-.leadership-swiper .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: #a3a3a3;
-    opacity: 0.8;
+.leadership-swiper .swiper-pagination {
+    bottom: 10px !important;
 }
 
 .leadership-swiper .swiper-pagination-bullet-active {
@@ -291,96 +306,67 @@ h1, h2, h3, h4, h5, h6 {
 /* --- END: Leadership Team Section Styles --- */
 
 
-/* --- START: Team Modal Styles --- */
+/* --- START: Team Modal Styles (with Image Fallback) --- */
 
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    display: none; /* Hidden by default */
-    align-items: center;
-    justify-content: center;
+    z-index: 1000; display: none; align-items: center; justify-content: center;
 }
 
-body.modal-open {
-    overflow: hidden; /* Prevents background from scrolling */
-}
-
-body.modal-open .modal-overlay {
-    display: flex; /* Show the modal */
-}
+body.modal-open { overflow: hidden; }
+body.modal-open .modal-overlay { display: flex; }
 
 .modal-content {
-    background-color: white;
-    border-radius: 0.75rem;
-    width: 90%;
-    max-width: 800px;
-    max-height: 85vh;
-    overflow-y: auto;
-    position: relative;
-    padding: 2rem;
+    background-color: white; border-radius: 0.75rem; width: 90%;
+    max-width: 800px; max-height: 85vh; overflow-y: auto;
+    position: relative; padding: 2rem;
 }
 
 .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #9ca3af;
-    cursor: pointer;
-    line-height: 1;
+    position: absolute; top: 10px; right: 20px; font-size: 2.5rem;
+    font-weight: bold; color: #9ca3af; cursor: pointer; line-height: 1;
 }
-.modal-close:hover {
-    color: #374151;
-}
+.modal-close:hover { color: #374151; }
 
-.modal-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Stack on mobile */
-    gap: 1.5rem;
-}
+.modal-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
 
 @media (min-width: 768px) {
-    .modal-grid {
-        grid-template-columns: 1fr 3fr; /* 1 part image, 3 parts text */
-        gap: 2rem;
-    }
-    .modal-content {
-        padding: 3rem;
-    }
+    .modal-grid { grid-template-columns: 1fr 3fr; gap: 2rem; }
+    .modal-content { padding: 3rem; }
 }
 
 .modal-image {
+    position: relative; 
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-shrink: 0;
+    background-color: #f3f4f6;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 6rem;
-    color: #e5e7eb;
 }
 
-.modal-name {
-    font-size: 2.25rem;
-    color: var(--blue-col);
-    margin-bottom: 0.25rem;
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.modal-title {
-    font-size: 1.1rem;
-    color: var(--green-col);
-    font-weight: bold;
-    margin-bottom: 1.5rem;
+.modal-image .fallback-icon {
+    position: absolute; /* Positioned inside the container */
+    font-size: 5rem;
+    color: #9ca3af;
+    display: none;
 }
 
-.modal-bio p {
-    color: #5a6a7b;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
+.modal-name { font-size: 2.25rem; color: var(--blue-col); margin-bottom: 0.25rem; }
+.modal-title { font-size: 1.1rem; color: var(--green-col); font-weight: bold; margin-bottom: 1.5rem; }
+.modal-bio p { color: #5a6a7b; line-height: 1.7; margin-bottom: 1rem; }
 
 /* --- END: Team Modal Styles --- */
 
