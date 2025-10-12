@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- END: Mission & Vision Section Styles --- */
 
-/* --- START: Leadership Team Section Styles (with Image Fallback) --- */
+/* --- START: Leadership Team Section Styles --- */
 
 .leadership-section {
     background-color: var(--dark-background);
@@ -225,6 +225,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .leadership-swiper {
     padding-bottom: 4rem !important;
+}
+
+.leadership-swiper .swiper-slide {
+    height: auto;
 }
 
 .team-card {
@@ -284,12 +288,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #5a6a7b;
     line-height: 1.6;
     flex-grow: 1;
-    margin-bottom: 1.5rem;
 }
 
 .read-more-link {
     color: var(--blue-col);
     font-weight: bold;
+    margin-top: auto;
+    padding: 1.5rem;
 }
 .read-more-link:hover {
     color: var(--green-col);
